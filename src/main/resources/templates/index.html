@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TuringRobot</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/js/jquery-easyui-1.5.2/themes/default/easyui.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/js/jquery-easyui-1.5.2/themes/icon.css}"/>
+
+</head>
+<body class="easyui-layout">
+    <div id="north" data-options="region:'north',title:'',split:false">
+        <img id="logo" th:src="@{/images/robot.png}">请开始你的表演
+    </div>
+    <div id="south" data-options="region:'south',title:'',split:false">
+        <div id="message">
+            <table>
+                <tr>
+                    <td>
+                        <input id="msg" class="easyui-textbox" data-options="iconCls:'icon-blank'" />
+                    </td>
+                    <td>
+                        <a id="btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-redo'">SEND</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="east" data-options="region:'east',title:'佳肥猫',split:true">
+        <img id="user-logo" th:src="@{/images/cat.png}" />
+        <div id="user-info">
+            <h3>佳肥猫</h3>
+            <h4>8岁</h4>
+            <h4>水瓶座</h4>
+        </div>
+    </div>
+    <div id="west" data-options="region:'west',title:'小螃蟹',split:true">
+        <img id="robot-logo" th:src="@{/images/crab.png}" />
+        <div id="robot-info">
+            <h3>小螃蟹</h3>
+            <h4>9岁</h4>
+            <h4>双鱼座</h4>
+        </div>
+    </div>
+    <div id="center" data-options="region:'center',title:'Talk Center'">
+        <div id="content">
+            <p>小螃蟹： 请开始你的表演</p>
+        </div>
+    </div>
+</body>
+
+<script th:src="@{/js/jquery-easyui-1.5.2/jquery.min.js}"></script>
+<script th:src="@{/js/jquery-easyui-1.5.2/jquery.easyui.min.js}"></script>
+<script th:src="@{/js/action.js}"></script>
+</html>
